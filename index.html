@@ -5,27 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Frog Hacks - Drive Mad</title>
-  <style>
-    * { box-sizing: border-box; }
 
-    body {
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      height: 100%;
       background: #101510;
       color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      padding: 18px;
+      padding: 14px;
+      text-align: center;
       background: #193c25;
       color: #8dff9c;
       font-size: 24px;
@@ -33,48 +36,42 @@
       letter-spacing: 2px;
     }
 
-    h1 { font-size: 42px; }
-
-    p {
-      color: #c7d8c7;
-      margin: 0 20px 28px;
+    main {
+      flex: 1;
+      min-height: 0;
+      display: flex;
     }
 
-    .play {
-      display: inline-block;
-      padding: 18px 42px;
-      border-radius: 10px;
-      background: #39d353;
-      color: #102016;
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: bold;
+    iframe {
+      width: 100%;
+      flex: 1;
+      min-height: 400px;
+      border: none;
+      background: #222;
     }
-
-    .play:hover { background: #8dff9c; }
 
     footer {
-      position: absolute;
-      bottom: 0;
-      padding: 12px;
-      color: #a9b8a9;
+      padding: 8px;
+      text-align: center;
+      background: #193c25;
+      color: #c7d8c7;
       font-size: 12px;
     }
   </style>
 </head>
+
 <body>
   <header>FROG HACKS</header>
 
-  <h1>DRIVE MAD</h1>
-  <p>Ready to drive? Click below to play.</p>
+  <main>
+    <iframe
+      src="https://maddrive.io/#google_vignette"
+      title="Drive Mad"
+      allow="fullscreen; autoplay"
+      allowfullscreen>
+    </iframe>
+  </main>
 
-  <a class="play"
-     href="https://maddrive.io/#google_vignette"
-     target="_blank"
-     rel="noopener noreferrer">
-    PLAY DRIVE MAD
-  </a>
-
-  <footer>Frog Hacks Gaming</footer>
+  <footer>Frog Hacks Gaming | Drive Mad</footer>
 </body>
 </html>
